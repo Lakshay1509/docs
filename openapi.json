@@ -1,0 +1,139 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "NeatMail API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/stats/clutter": {
+      "get": {
+        "summary": "Get Clutter Metric",
+        "description": "Returns top 3 domains with the most unread emails — useful for identifying sources to unsubscribe from.",
+        "tags": ["Stats"],
+        "security": [{ "clerkAuth": [] }],
+        "responses": {
+          "200": {
+            "description": "Clutter data returned successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "clutterData": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "domain": { "type": "string", "example": "newsletter.example.com" },
+                          "unreadCount": { "type": "integer", "example": 42 }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/api/stats/labelsThisWeek": {
+      "get": {
+        "summary": "Get Labels This Week",
+        "description": "Returns top 4 labels applied to emails since Monday, with counts and percentages.",
+        "tags": ["Stats"],
+        "security": [{ "clerkAuth": [] }],
+        "responses": {
+          "200": {
+            "description": "Labels returned successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "label": { "type": "string", "example": "Newsletter" },
+                      "count": { "type": "integer", "example": 15 },
+                      "percentage": { "type": "number", "example": 34.1 },
+                      "color": { "type": "string", "example": "#FF5733" }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/api/stats/mailsThisMonth": {
+      "get": {
+        "summary": "Get Mails This Month",
+        "description": "Returns count of labeled emails received in the last 30 days.",
+        "tags": ["Stats"],
+        "security": [{ "clerkAuth": [] }],
+        "responses": {
+          "200": {
+            "description": "Count returned successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": { "type": "integer", "example": 120 }
+                  }
+                }
+              }
+            }
+          },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/api/stats/traffic-heatmap": {
+      "get": {
+        "summary": "Get Inbox Traffic Heatmap",
+        "description": "Returns email activity grouped by day of week and hour of day for heatmap visualization.",
+        "tags": ["Stats"],
+        "security": [{ "clerkAuth": [] }],
+        "responses": {
+          "200": {
+            "description": "Heatmap data returned successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "trafficData": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "day_of_week": { "type": "integer", "example": 1, "description": "0 = Sunday, 6 = Saturday" },
+                          "hour_of_day": { "type": "integer", "example": 9 },
+                          "email_count": { "type": "integer", "example": 23 }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "clerkAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Clerk session token"
+      }
+    }
+  }
+}
