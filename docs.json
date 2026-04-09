@@ -30,6 +30,7 @@
               "connect-email"
             ]
           },
+          { "group": "API Reference", "openapi": "openapi.json" },
           {
             "group": "Core Features",
             "pages": [
