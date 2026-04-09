@@ -1,0 +1,64 @@
+---
+title: "Connect Email"
+description: "Link your Gmail or Outlook account to Neatmail using OAuth."
+---
+
+Neatmail supports Gmail and Outlook. You connect your account once using OAuth — you'll be redirected to Google or Microsoft to authorize access, and Neatmail never sees or stores your password.
+
+<Tabs>
+  <Tab title="Gmail">
+    <Steps>
+      <Step title="Go to neatmail.app">
+        Sign in to your Neatmail account at [neatmail.app](https://www.neatmail.app).
+      </Step>
+      <Step title="Click Connect Gmail">
+        On the connection screen, select **Connect Gmail**. You'll be redirected to Google's authorization page.
+      </Step>
+      <Step title="Authorize access">
+        Sign in with your Google account if prompted, then review the permissions Neatmail is requesting and click **Allow**.
+      </Step>
+      <Step title="Return to Neatmail">
+        After authorizing, you'll be returned to Neatmail automatically. The onboarding modal will open so you can choose your email categories.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Outlook">
+    <Steps>
+      <Step title="Go to neatmail.app">
+        Sign in to your Neatmail account at [neatmail.app](https://www.neatmail.app).
+      </Step>
+      <Step title="Click Connect Outlook">
+        On the connection screen, select **Connect Outlook**. You'll be redirected to Microsoft's authorization page.
+      </Step>
+      <Step title="Authorize access">
+        Sign in with your Microsoft account if prompted, then review the permissions Neatmail is requesting and click **Accept**.
+      </Step>
+      <Step title="Return to Neatmail">
+        After authorizing, you'll be returned to Neatmail automatically. The onboarding modal will open so you can choose your email categories.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+## Permissions requested
+
+Neatmail requests only the permissions it needs to label your emails and create drafts. Here's what each permission is used for:
+
+| Permission | Purpose |
+|---|---|
+| Read email metadata | Used to classify incoming emails by subject, sender, and snippet |
+| Apply labels / categories | Assigns the appropriate label to each email in your inbox |
+| Create and manage labels | Creates Neatmail's category labels in your Gmail or Outlook account |
+| Compose drafts | Creates reply drafts for emails that need a response |
+
+No other inbox access is requested. Neatmail does not read, export, or store the full content of your emails.
+
+<Warning>
+  Neatmail only uses email content (subject, sender, and a short snippet) for classification. No raw email content is stored on Neatmail servers after processing.
+</Warning>
+
+## Disconnecting your account
+
+To remove Neatmail's access to your email and delete all associated data, go to the **Delete Account** option in the sidebar footer and confirm the deletion. All your data — including labels, preferences, and integration settings — will be permanently removed.
+
+You can also revoke Neatmail's OAuth access directly from your [Google account permissions](https://myaccount.google.com/permissions) or [Microsoft account connected apps](https://account.microsoft.com/privacy/app-access) page at any time.

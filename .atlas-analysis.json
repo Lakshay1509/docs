@@ -1,0 +1,79 @@
+{
+  "projectType": "saas",
+  "projectName": "Neatmail",
+  "projectDescription": "AI-powered email management platform that automatically labels Gmail and Outlook messages in real time and drafts intelligent replies in your tone.",
+  "theme": "willow",
+  "primaryColor": "#040404",
+  "lightColor": null,
+  "darkColor": null,
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "connect-email"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "features/auto-labeling",
+              "features/ai-drafts",
+              "features/unsubscribe",
+              "features/analytics"
+            ]
+          },
+          {
+            "group": "Settings",
+            "pages": [
+              "settings/labels",
+              "settings/draft-preferences",
+              "settings/integrations"
+            ]
+          },
+          {
+            "group": "Billing",
+            "pages": [
+              "billing/plans",
+              "billing/free-trial",
+              "billing/manage-subscription"
+            ]
+          },
+          {
+            "group": "Help",
+            "pages": [
+              "help/faq",
+              "help/troubleshooting"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Automatic real-time email labeling for Gmail and Outlook",
+    "AI-generated reply drafts in the user's tone",
+    "9 built-in email categories plus custom labels",
+    "Unsubscribe manager to reduce inbox clutter",
+    "Analytics dashboard with email trends, label distribution, and activity heatmap",
+    "Telegram integration for email notifications",
+    "Draft sensitivity controls and custom prompts",
+    "7-day free trial with subscription via DodoPay"
+  ],
+  "publicApiSurface": [
+    "POST /api/checkout — initiate subscription checkout",
+    "POST /api/checkout/cancelSubscription — cancel or renew subscription",
+    "Gmail OAuth connection (Google APIs)",
+    "Outlook OAuth connection (Microsoft Graph API)",
+    "Telegram bot integration",
+    "Email label categories: Action Needed, Pending Response, Automated Alerts, Finance, Event Update, Discussion, Read Only, Resolved, Marketing",
+    "Custom label creation",
+    "Draft preference settings: prompt, signature, sensitivity, font size, font color",
+    "Inbox watch toggle (enable/disable real-time monitoring)"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "Neatmail",
+  "theme": "willow",
+  "logo": {
+    "light": "https://media.brand.dev/6b3cb4ac-0621-4924-abcb-9b04c0225da5.png",
+    "dark": "https://media.brand.dev/6b3cb4ac-0621-4924-abcb-9b04c0225da5.png"
+  },
+  "favicon": "https://media.brand.dev/03a67e5b-7c59-4e32-bfd6-b476476e9f34.png",
+  "colors": {
+    "primary": "#040404"
+  },
+  "navbar": {
+    "primary": {
+      "type": "github",
+      "href": "https://github.com/Lakshay1509/NeatMail"
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "connect-email"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "features/auto-labeling",
+              "features/ai-drafts",
+              "features/unsubscribe",
+              "features/analytics"
+            ]
+          },
+          {
+            "group": "Settings",
+            "pages": [
+              "settings/labels",
+              "settings/draft-preferences",
+              "settings/integrations"
+            ]
+          },
+          {
+            "group": "Billing",
+            "pages": [
+              "billing/plans",
+              "billing/free-trial",
+              "billing/manage-subscription"
+            ]
+          },
+          {
+            "group": "Help",
+            "pages": [
+              "help/faq",
+              "help/troubleshooting"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

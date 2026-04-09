@@ -1,0 +1,55 @@
+---
+title: Draft Preferences
+description: Customize how Neatmail generates AI reply drafts, including tone, signature, and when drafts are created.
+---
+
+Configure how Neatmail generates reply drafts at **Settings > Draft Preference**. These settings control when drafts are created, what instructions the AI follows, and how the draft text is formatted.
+
+## Fields
+
+### Enable Drafts
+
+A toggle that activates or deactivates draft generation entirely. When active, Neatmail automatically watches incoming emails and drafts suitable responses based on your preferences.
+
+<Warning>
+  Draft generation requires an active subscription. The toggle is disabled if you do not have one.
+</Warning>
+
+### Draft Prompt
+
+A free-text field (up to 1000 characters) where you provide personalized instructions for the AI. Use this to describe your communication style, goals, decision-making approach, or important details about your business or role.
+
+<Tip>
+  A detailed draft prompt leads to significantly better drafts. Include your name, role, preferred tone, and common response patterns you rely on.
+</Tip>
+
+### Email Signature
+
+Paste your email signature here so it is automatically appended to generated drafts.
+
+<Note>
+  Copy your signature from Gmail settings rather than from a previously sent email. Copying from a sent email may include extra formatting that does not render correctly in drafts.
+</Note>
+
+### Draft Sensitivity
+
+Controls when Neatmail generates a draft for an incoming email. Select one of the following options:
+
+| Option | Behavior |
+|---|---|
+| `always draft` | Generate a draft for every incoming email. |
+| `if known sender AND directly addressed` | Only draft when the sender is in your contacts and the email is addressed directly to you. |
+| `if actionable` | Only draft emails that require a response or action. |
+| `if actionable AND critical` | Only draft emails that are both actionable and marked as critical. |
+
+### Font Size
+
+Numeric field for the font size used in generated drafts. Accepts values between **8** and **72**.
+
+### Font Color
+
+Hex color picker for the text color used in generated drafts. Enter a hex value directly (e.g., `#000000`) or use the color picker to select a color visually.
+
+## Saving changes
+
+Click **Update preferences** to apply your changes. All fields are saved together.
